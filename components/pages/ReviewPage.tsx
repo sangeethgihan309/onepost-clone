@@ -66,7 +66,7 @@ const ReviewPage: React.FC<Props> = ({ letterData, onGoBack, onConfirmAndPay }) 
         </div>
     );
 
-    const GenericPreview = ({ title, children }: { title: string, children: React.ReactNode }) => (
+    const GenericPreview = ({ title, children }: { title: string, children?: React.ReactNode }) => (
         <div className="w-full max-w-2xl mx-auto bg-white p-8 shadow-lg border rounded-lg min-h-[300px] flex flex-col items-center justify-center text-center">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">{title}</h3>
             {children}

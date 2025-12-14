@@ -38,7 +38,7 @@ const App: React.FC = () => {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomePage onStart={handleStart} />;
+        return <HomePage onStart={handleStart} onGoHome={resetAndGoHome} />;
       case 'create':
         return (
           <CreateLetterPage
@@ -64,7 +64,7 @@ const App: React.FC = () => {
             />
         );
       default:
-        return <HomePage onStart={handleStart} />;
+        return <HomePage onStart={handleStart} onGoHome={resetAndGoHome} />;
     }
   };
 

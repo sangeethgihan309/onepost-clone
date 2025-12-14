@@ -6,6 +6,7 @@ import { ServiceType } from '../../types';
 
 interface HomePageProps {
   onStart: (type?: ServiceType) => void;
+  onGoHome: () => void;
 }
 
 const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description: string; colorClass: string; onClick: () => void }> = ({ icon, title, description, colorClass, onClick }) => (
@@ -25,10 +26,10 @@ const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description:
   </div>
 );
 
-const HomePage: React.FC<HomePageProps> = ({ onStart }) => {
+const HomePage: React.FC<HomePageProps> = ({ onStart, onGoHome }) => {
   return (
     <>
-      <Header onGoHome={() => onStart()} />
+      <Header onGoHome={onGoHome} />
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
