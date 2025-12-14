@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="si">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnePost - ඔබේ පණිවිඩය, අපේ තැපැල්</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#4A5568', // dark gray
+              accent: '#48BB78', // green
+              'accent-dark': '#38A169',
+              background: '#F7FAFC', // light cream
+              'brand-blue': '#3182CE',
+              'brand-blue-dark': '#2B6CB0',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              sinhala: ['Noto Sans Sinhala', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 1s ease-in-out',
+              'confetti-rain': 'confettiRain 2s linear forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              confettiRain: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100vh)' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.546.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background font-sinhala text-primary">
+    <div id="root"></div>
+  </body>
+</html>
